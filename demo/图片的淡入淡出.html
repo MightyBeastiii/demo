@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img1 {
+            opacity: 0.3;
+        }
+    </style>
+    <script>
+        window.onload = function (){
+            var oImg = document.getElementById('img1')
+            oImg.onmouseover = function (){
+                startMove(100)
+            }
+            oImg.onmouseout = function (){
+                startMove(30)
+            }
+        }
+        var opacity = 30;
+        var timer = null;
+        function startMove(iTarget){
+            var oImg = document.getElementById('img1');
+            clearInterval(timer);
+            timer = setInterval(function (){
+                var iSpeed = 0;
+                if(opacity<iTarget){
+                    iSpeed = 10;
+                }else{
+                    iSpeed = -10;
+                }
+                if(opacity==iTarget){
+                    clearInterval(timer)
+                }else{
+                    opacity+=iSpeed
+                    oImg.style.opacity = opacity/100;
+                }
+            },30)
+        }
+    </script>
+</head>
+<body>
+    <img id="img1" src="./img2/1.JPG" alt="">
+</body>
+</html>

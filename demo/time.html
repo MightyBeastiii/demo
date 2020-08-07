@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        function toDoble(num){
+            if(num<10){
+                return '0'+num;
+            }else{
+                return ''+num;
+            }
+        }
+        window.onload = function (){
+            var aImg = document.getElementsByTagName('img');
+            var i = 0;
+            function upDateTime(){
+                //var arr = ['1','5','0','6','3','2'];
+                var oDate = new Date();
+                var str = toDoble(oDate.getHours())+toDoble(oDate.getMinutes())+toDoble(oDate.getSeconds());
+                for(i=0;i<aImg.length;i++){
+                    aImg[i].src='./新建文件夹/'+str.charAt(i)+'.png'
+                }
+                //alert(str)
+            }
+            setInterval(upDateTime, 1000)
+            upDateTime()
+        }
+    </script>
+</head>
+<body style="color: #FFFF00; background: #990099; font-size: 50px;">
+    <img src="./新建文件夹/0.png" alt="">
+    <img src="./新建文件夹/0.png" alt="">
+    点
+    <img src="./新建文件夹/0.png" alt="">
+    <img src="./新建文件夹/0.png" alt="">
+    分
+    <img src="./新建文件夹/0.png" alt="">
+    <img src="./新建文件夹/0.png" alt="">
+    秒
+</body>
+</html>

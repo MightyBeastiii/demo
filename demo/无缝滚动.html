@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .roll {
+            margin: 50px auto;
+        }
+        .warp {
+            width: 546px;
+            height: 108px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .warp ul {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .warp li {
+            float: left;
+            list-style: none;
+            width: 182px;
+            height: 108px;
+            padding-right: 10px;
+            text-align: center;
+        }
+        .warp li img {
+            width: 182px;
+            height: 108px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var oDiv = document.getElementById('roll');
+            var oUl = oDiv.getElementsByTagName('ul')[0];
+            var oLi = oUl.getElementsByTagName('li');
+            var iSpeed = 3;
+            oUl.innerHTML+=oUl.innerHTML;
+            oUl.style.width = oLi[0].offsetWidth*oLi.length + 'px'
+            setInterval(function() {
+                oUl.style.left = oUl.offsetLeft - iSpeed + 'px';
+                if(oUl.offsetLeft < -oUl.offsetWidth/2){
+                    oUl.style.left = '0px'
+                }
+            },30)
+        }
+    </script>
+</head>
+<body>
+    <div class="roll" id="roll">
+        <div class="warp">
+            <ul>
+                <li>
+                    <img src="./img2/1.JPG" alt="">
+                </li>
+                <li>
+                    <img src="./img2/2.JPG" alt="">
+                </li>
+                <li>
+                    <img src="./img2/3.JPG" alt="">
+                </li>
+                <li>
+                    <img src="./img2/4.JPG" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

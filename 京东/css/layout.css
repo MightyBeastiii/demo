@@ -1,0 +1,288 @@
+.nav {
+    height: 30px;
+    background: #e3e4e5;
+    border: 1px solid #ddd;
+}
+.nav-box {
+    margin: 0px auto;
+    width: 1190px;
+    text-align: right;
+}
+.nav ul li {
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+}
+.nav-box ul li:not(:last-child):after {
+    content: "";
+    width: 1px;
+    height: 14px;
+    background: #ccc;
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 0px;
+}
+.nav-box li a {
+    color: #999;
+    text-decoration: none;
+}
+.nav-box li a:hover {
+    color: #e1251b;
+}
+
+.header {
+    height: 140px;
+    background: #fff;
+}
+.header-box {
+    width: 1190px;
+    display: flex;
+    margin: 0px auto;
+    padding: 10px 0px;
+}
+.header .logo-box {
+    width: 190px;
+    height: 120px;
+}
+.logo-box img {
+    width: 190px;
+    height: 120px;
+}
+
+.header .search-box {
+    width: 790px;
+    padding: 0px 10px;
+}
+.header .search-bar {
+    padding: 10px 0px 0px 50px;
+    display: flex;
+}
+.search-bar input {
+    width: 500px;
+    height: 28px;
+    line-height: 30px;
+    padding: 2px 10px;
+    border: 2px solid #e1251b;
+    outline: none;
+}
+.search-bar .search-btn {
+    width: 50px;
+    height: 32px;
+    border: 2px solid #e1251b;
+    background: #e1251b;
+    cursor: pointer;
+    line-height: 32px;
+    text-align: center;
+}
+.search-bar .iconfont-search {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.search-bar .cart-btn {
+    margin-left: 20px;
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border: 1px solid #eee;
+    color: #e1251b;
+    font-size: 12px;
+    cursor: pointer;
+}
+.search-bar .iconfont-cart {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 5px 0px 0px;
+}
+.search-bar .cart-btn:hover {
+    border: 1px solid #e1251b;
+}
+.header .recommend {
+    font-size: 12px;
+    padding: 5px 0px 15px 50px;
+}
+.header .recommend li {
+    padding: 0px 3px;
+}
+.search-box .recommend a {
+    color: #999;
+}
+.search-box ul li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+.search-box ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+.content .warpper {
+    width: 1190px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+}
+.menu-box {
+    width: 190px;
+    margin-right: 10px;
+    padding: 10px 0px;
+    background: #fff;
+    position: relative;
+}
+.menu-box ul li {
+    height: 25px;
+    line-height: 25px;
+    padding: 0px 12px;
+    overflow: hidden;
+}
+.menu-box ul li:hover {
+    background: #d9d9d9;
+}
+.menu-box ul li a {
+    color: #333;
+}
+.menu-box ul li a:hover {
+    color: #e1251b;
+}
+.menu-box .sub-menu {
+    position: absolute;
+    top: 0px;
+    left: 190px;
+    width: 900px;
+    padding: 20px;
+    font-size: 12px;
+    background: #fff;
+    z-index: 10;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.menu-box ul li:hover .sub-menu {
+    display: block;
+}
+.sub-menu .left-box {
+    float: left;
+    max-width: 700px;
+}
+.sub-menu .right-box {
+    float: right;
+    width: 168px;
+}
+.sub-menu .pic-box {
+    margin-bottom: 10px;
+}
+.sub-menu .pic-box:last-child {
+    margin: 0;
+}
+.sub-menu .pic-box img {
+    width: 168px;
+    height: 134px;
+}
+.sub-menu .menu-title {
+    margin-bottom: 10px;
+}
+.sub-menu .menu-title .item {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 0 8px;
+    margin-right: 10px;
+}
+.sub-menu .menu-title .item:hover {
+    background: #e1251b;
+}
+.sub-menu dl {
+    display: flex;
+}
+.sub-menu dt {
+    width: 62px;
+    font-weight: bold;
+    text-align: right;
+    flex-shrink: 0;
+}
+.sub-menu dl dd a {
+    padding: 4px 8px;
+    white-space: nowrap;
+}
+
+
+.slider-box {
+    margin-right: 10px;
+}
+.slider-box .slider {
+    width: 590px;
+    height: 470px;
+    position: relative;
+    overflow: hidden;
+}
+.slider ul {
+    width: 500%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slider ul li {
+    float: left;
+}
+.slider ul li img {
+    width: 590px;
+    height: 470px;
+}
+.slider-box .left-box {
+    background: rgba(0, 0, 0, 0.3);
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+}
+.slider-box .right-box {
+    background: rgba(0, 0, 0, 0.3);
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px 0px 0px 5px;
+}
+.slider-box .left-box:hover,.slider-box .right-box:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+.slider-box .left-box, .slider-box .right-box span {
+    font-size: 22px;
+}
+.slider-box .index-box {
+    position: absolute;
+    bottom: 5%;
+    left: 8%;
+}
+.slider-box .index-box > ol {
+    height: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.slider-box .index-box > ol > li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    margin-right: 5px;
+}

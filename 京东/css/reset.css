@@ -1,0 +1,10 @@
+html,body,ul,li,dl,dt,dd,ol {
+    margin: 0px;
+    padding: 0px;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}

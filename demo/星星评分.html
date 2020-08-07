@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #rank {
+        width: 140px;
+        height: 28px;
+        margin: 10px auto;
+      }
+      #rank ul {
+        height: 28px;
+        margin-bottom: 10px;
+      }
+      #rank li {
+        list-style: none;
+        cursor: pointer;
+        width: 28px;
+        float: left;
+        height: 28px;
+        background: url(./img2/star.JPG) no-repeat 0 0;
+        line-height: 28px;
+      }
+      #rank .active {
+        background: url(./img2/star.JPG) no-repeat 0 -28px;
+      }
+      #rank p {
+        width: 134px;
+        height: 28px;
+        background: white;
+        line-height: 28px;
+        text-align: center;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        display: none;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        var oDiv = document.getElementById('rank');
+        var aLi = oDiv.getElementsByTagName('li');
+        var oP = oDiv.getElementsByTagName('p')[0];
+        var i = 0;
+        var oDate = ['很差', '较差', '一般', '较好', '力荐'];
+        for (i = 0; i < aLi.length; i++) {
+          aLi[i].index = i;
+          aLi[i].onmouseover = function () {
+            oP.style.display = 'block';
+            oP.innerHTML = oDate[this.index];
+            for (i = 0; i <= this.index; i++) {
+              aLi[i].className = 'active';
+            }
+          };
+          aLi[i].onmouseout = function () {
+            oP.style.display = 'none';
+            for (i = 0; i < aLi.length; i++) {
+              aLi[i].className = '';
+            }
+          };
+          aLi[i].onclick = function () {
+            alert('评分成功' + (this.index + 1) + '分');
+          };
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="rank">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <p>一般</p>
+    </div>
+  </body>
+</html>
