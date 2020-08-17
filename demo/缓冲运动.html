@@ -27,12 +27,13 @@
             var oDiv = document.getElementById('div1');
             clearInterval(timer);
             timer = setInterval(function (){
-                var iSpeed = (iTarget-oDiv.offsetLeft)/8;
+                var iSpeed = (iTarget-oDiv.offsetLeft)/8;/* 
                 if(iSpeed>0){
                     iSpeed = Math.ceil(iSpeed);
                 }else{
                     iSpeed = Math.floor(iSpeed);
-                }
+                } 可以用三目*/
+                iSpeed = iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed)
                 if(oDiv.offsetLeft==iTarget){
                     clearInterval(timer);
                 }else{

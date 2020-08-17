@@ -56,7 +56,7 @@
             obj.timer = setInterval(function (){
                 let iCurr = 0;
                 if(attr == 'opacity'){
-                    iCurr = parseFloat(getStyle(obj, attr))*100;
+                    iCurr = parseInt(parseFloat(getStyle(obj, attr))*100);
                 }else{
                     iCurr = parseInt(getStyle(obj, attr));
                 }
