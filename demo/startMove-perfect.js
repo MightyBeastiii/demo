@@ -8,15 +8,15 @@ function getStyle(obj, attr){
 function startMove(obj, json, fun){
     clearInterval(obj.timer);
     obj.timer = setInterval(function (){
-        for(let attr in json){
-            let iCurr = 0;
-            let bStop = true;
+        for(var attr in json){
+            var iCurr = 0;
+            var bStop = true;
             if(attr == 'opacity'){
                 iCurr = parseInt(parseFloat(getStyle(obj, attr))*100);
             }else{
                 iCurr = parseInt(getStyle(obj, attr));
             }
-            let iSpeed = (json[attr] - iCurr)/8;
+            var iSpeed = (json[attr] - iCurr)/8;
             iSpeed = iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed)
             if(iCurr!=json[attr]){
                 bStop = false;
